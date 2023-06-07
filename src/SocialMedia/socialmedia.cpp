@@ -10,8 +10,8 @@
 #include <iostream>
 #include <algorithm>
 #include "socialmedia.h"
-#include "network.cpp"
-#include "database.cpp"
+#include "../Network/network.cpp"
+#include "../Database/database.cpp"
 
 namespace socialmedia{
 
@@ -139,7 +139,7 @@ namespace socialmedia{
                     std::cout << std::endl;
                     error_t insert = insert_node(mail, nm, brth, phne, cty);
                     if(insert.flag){
-                        std::cout << insert.errmsg << std::endl;
+                        std::cout << std::endl << insert.errmsg << std::endl;
                         break;
                     }
                     show_menu();
@@ -162,7 +162,7 @@ namespace socialmedia{
                     std::cout << std::endl;
                     error_t flw = follow(mail, mail2);
                     if(flw.flag){
-                        std::cout << flw.errmsg << std::endl;
+                        std::cout << std::endl << flw.errmsg << std::endl;
                         break;
                     }
                     show_menu();
@@ -185,7 +185,7 @@ namespace socialmedia{
                     std::cout << std::endl;
                     error_t unflw = unfollow(mail, mail2);
                     if(unflw.flag){
-                        std::cout << unflw.errmsg << std::endl;
+                        std::cout << std::endl << unflw.errmsg << std::endl;
                         break;
                     }
                     show_menu();
@@ -221,7 +221,7 @@ namespace socialmedia{
                     std::cout << std::endl;
                     error_t exclude = remove(mail);
                     if(exclude.flag){
-                        std::cout << exclude.errmsg << std::endl;
+                        std::cout << std::endl << exclude.errmsg << std::endl;
                         break;
                     }
                     show_menu();
@@ -245,8 +245,7 @@ namespace socialmedia{
                     show_menu();
                     error_t path = shortest_path(mail, mail2);
                     if(path.flag){
-                        std::cout << std::endl;
-                        std::cout << path.errmsg << std::endl;
+                        std::cout << std::endl << path.errmsg << std::endl;
                         break;
                     }
                     std::cout << std::endl;
@@ -262,8 +261,11 @@ namespace socialmedia{
                     std::cout << "Digite o formato do arquivo que deseja exportar (pdf, png, jpeg, dot): ";
                     std::cin >> temp;
                     if(std::count(std::begin(format_buffer), std::end(format_buffer), temp)){
-                        export_to_file(temp);
-                        std::cout << "Arquivo network." << temp << " criado com sucesso!" << std::endl;
+                        create_dot();
+                        std::string tc = "dot -T" + temp + " -o dot_exports/network." + temp + " dot_exports/network.dot";
+                        std::system(tc.c_str());
+                        std::cout << std::endl << "Arquivo network." << temp 
+                                  << " criado com sucesso no diretório dot_exports!" << std::endl;
                         break;
                     }
                     std::cout << "Formato de arquivo inexistente/indisponível!" << std::endl;
@@ -273,14 +275,12 @@ namespace socialmedia{
 
                 case 9:
                     show_menu();
-                    std::cout << std::endl;
-                    std::cout << sm << std::endl;
+                    std::cout << std::endl << sm << std::endl;
                     break;
 
                 default:
                     show_menu();
-                    std::cout << std::endl;
-                    std::cout << "Opção inválida, por favor insira novamente!" << std::endl;
+                    std::cout << std::endl << "Opção inválida, por favor insira novamente!" << std::endl;
                     break;
             }   
         }

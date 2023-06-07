@@ -185,7 +185,7 @@ namespace database{
      * @return bool --> true: Database successfully started, false: Error starting the database
     */
     bool database::Database::dbinit(socialmedia::SocialMedia &sm){
-        if(open_database("graphsocial.db") && create_table() && load_users(sm) && load_links(sm))
+        if(open_database("src/Database/graphsocial.db") && create_table() && load_users(sm) && load_links(sm))
             return true;
         return false;
     }

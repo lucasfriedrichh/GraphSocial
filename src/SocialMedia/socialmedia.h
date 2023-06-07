@@ -11,7 +11,7 @@
 #ifndef SOCIALMEDIA_H
 #define SOCIALMEDIA_H
 
-#include "network.h"
+#include "../Network/network.h"
 #include <string>
 
 namespace socialmedia{

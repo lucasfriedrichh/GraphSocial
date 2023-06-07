@@ -15,7 +15,7 @@
 
 #include <string>
 #include <sqlite3.h>
-#include "socialmedia.h"
+#include "../SocialMedia/socialmedia.h"
 
 namespace database{
 
@@ -30,6 +30,8 @@ public:
                    const std::string &brth, const std::string &phne,
                    const std::string &cty);
     bool save_link(const std::string &src, const std::string &dest);
+    Database(const Database&) = delete;                 
+    Database& operator=(const Database&) = delete;
 
 private:
     sqlite3* db;

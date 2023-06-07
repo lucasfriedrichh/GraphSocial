@@ -89,7 +89,7 @@ namespace network{
             for(size_t i = 0; i < psrc->links.size(); i++){
                 if(psrc->links[i]->user.email == pdest->user.email){
                     errors.flag = true;
-                    errors.errmsg = "Estes usuários já se seguem mutuamente!";
+                    errors.errmsg = "O usuário: " + src + " já segue: " + dest + "!";
                     return errors;
                 }
             }
@@ -128,7 +128,7 @@ namespace network{
         }
         if(!found){
             errors.flag = true;
-            errors.errmsg = "O usuário informado não segue o outro usuário!";
+            errors.errmsg = "O usuário: " + src + " não segue: " + dest + "!";
             return errors;
         }
         return errors;
@@ -241,12 +241,11 @@ namespace network{
     /**
      * @namespace network
      * @class Network
-     * @name export_to_file()
-     * @brief Export the graph using dot language (graphviz dependence) to a file
-     * @param filetype --> const std::string: Type of the file to be exported (Ex: png)
+     * @name create_dot()
+     * @brief Create the graph using dot language (graphviz dependence) to a file (.dot)
     */
-    void network::Network::export_to_file(const std::string &filetype) const{
-        std::string filename = "network.dot";
+    void network::Network::create_dot() const{
+        std::string filename = "dot_exports/network.dot";
         std::ofstream dot(filename);
         dot << "Digraph{\n";
         for(auto n : nodes){
@@ -261,8 +260,6 @@ namespace network{
             dot << "\n";
         }
         dot << "}\n";
-        std::string tc = "dot -T" + filetype + " -o network." + filetype + " " + filename;
-        std::system(tc.c_str());
     }
 
     /**
@@ -300,6 +297,7 @@ namespace network{
             
             case 2:
                 errors.errmsg = "Operação cancelada!";
+                errors.flag = true;
                 return errors;
 
             default:

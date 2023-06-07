@@ -72,7 +72,7 @@ public:
     node* find(const std::string &s);
     error_t follow(const std::string &src, const std::string &dest);
     error_t unfollow(const std::string &src, const std::string &dest);
-    void export_to_file(const std::string &s) const;
+    void create_dot() const;
     void list_user(const std::string &s);
     void list_users();
     unsigned int indegree(const std::string &s) const;
