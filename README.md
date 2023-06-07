@@ -16,3 +16,4 @@
 
 ### Utilizamos a extensao SQLite Viewer no Visual Studio Code para melhor visualizacao do banco de dados
 `
+![image](https://github.com/lucasfriedrichh/GraphSocial/assets/91904246/ef317c9e-3af7-45c6-a47a-fa741dca5b7e)
