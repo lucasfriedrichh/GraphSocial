@@ -3,6 +3,15 @@
 ## Visao Geral do Projeto
     Projeto criado no Sistema Operacional Linux Ubuntu 22.04.
 
+
+## Visao Geral do Projeto
+    sudo apt install sqlite3
+
+    sudo apt install libsqlite3-dev
+
+    
+
+
 ## Para iniciar o projeto, deve ser instalado:
 
  - Biblioteca SQLITE3:
