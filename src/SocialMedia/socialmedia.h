@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @headerfile socialmedia.h (header file)
  * 
  * SocialMedia class interface/structure

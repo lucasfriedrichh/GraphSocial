@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @headerfile network.h (header file)
  * 
  * Network class interface/structure

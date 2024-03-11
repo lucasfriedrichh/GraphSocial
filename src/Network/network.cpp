@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @file network.cpp (.cpp file) (implementation file)
  * 
  * Network class members/member functions implementation

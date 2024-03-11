@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @file database.cpp (.cpp file) (implementation file)
  * 
  * Database class members/member functions implementation

@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @file socialmedia.cpp (.cpp file) (implementation file)
  * 
  * SocialMedia class members/member functions implementation

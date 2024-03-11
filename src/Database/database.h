@@ -1,5 +1,5 @@
 /**
- * @author Guilherme Martinelli Taglietti
+ * @author Lucas M. T. Friedrich
  * @headerfile database.h (header file)
  * 
  * Database class using SQLite to save/load users/links in the application
