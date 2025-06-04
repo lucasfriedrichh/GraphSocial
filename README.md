@@ -62,7 +62,7 @@ Universidade de Passo Fundo
 #### 6. Excluir usuario
 ![image](https://github.com/lucasfriedrichh/GraphSocial/assets/91904246/00ec9158-ce47-47e7-854a-d10345895fcc)
 
-#### 7. Verificar caminho do entre 2 usuarios
+#### 7. Verificar caminho entre 2 usuarios.
 ![image](https://github.com/lucasfriedrichh/GraphSocial/assets/91904246/79902b15-9232-404a-8fca-53bc29650b6e)
 
 #### 8. Exportar rede
